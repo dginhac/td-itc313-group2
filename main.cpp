@@ -16,5 +16,6 @@ int main(int argc, char const *argv[]) {
 
    std::cout << "Hello world" << std::endl;
    std::cout << date::toString(d1) << std::endl;
+   std::cout << "yes I'm a dev" << std::endl;
    return 0;
 }
