@@ -7,6 +7,8 @@
   */
 
 #include <string>
+#include <iostream>
+
 
 #ifndef ADDRESS_H
 #define ADDRESS_H
@@ -25,10 +27,9 @@ class Address {
         std::string street() const;
         std::string zipcode() const;
         std::string city() const;
-
 };
 
-std::string full_address(Address address);
+std::string full_address(const Address& address);
 
 std::ostream& operator<<(std::ostream& os, const Address& address);
 

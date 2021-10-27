@@ -17,6 +17,5 @@ int main(int argc, char const *argv[]) {
    std::cout << a1 << std::endl;
    people::Address a2(1337,"rue des dev","21000", "Dijon");
    std::cout << a2 << std::endl;
-   std::cout << full_address(a1) << std::endl;
    return 0;
 }
