@@ -34,15 +34,15 @@ Methodes ou Fonctions Helper
 
 ## Classe Address
 
-Variables:
+Variables: OK
 * numero (number) : int
 * rue (street) : string
 * code postal (zip) : string (pour prendre en compte les 0 du debut) ou int
 * ville (city) : string
 
 Methodes ou Fonctions Helper
-* constructeur
-* Getters ? / Setters ?
-* addresse complete ?
-* surcharges d'opérateur ?
+* constructeur OK
+* Getters OK
+* addresse complete OK
+* surcharges d'opérateur NOK
 * ?

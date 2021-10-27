@@ -8,14 +8,20 @@
 #include <iostream>
 
 #include "date.h"
+#include "address.h"
 
 
 int main(int argc, char const *argv[]) {
 
-   date::Date d1(10,12);
+
+
+   people::Address a1(12,"rue des geeks","01110", "St-Etienne");
+
+   std::cout << full_address(a1) << std::endl;
 
    std::cout << "Hello world" << std::endl;
-   std::cout << date::toString(d1) << std::endl;
-   std::cout << "yes I'm a dev" << std::endl;
+
+   std::cout << a1 << std::endl;
+
    return 0;
 }
