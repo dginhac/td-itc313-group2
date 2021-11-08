@@ -31,12 +31,21 @@ int main(int argc, char const *argv[]) {
    bank::Account ac1(c1, "FR76XX", date::Date(11,8), 1000, 50);
    std::cout << ac1 ;
 
+   ac1.debit(40);
+   std::cout << ac1.balance() << std::endl;
+   ac1.credit(40);
+   std::cout << ac1.balance() << std::endl;
 
    bank::Account ac2(c1, "FR76XX", date::Date(11,8), 1000);
-   std::cout << ac2 ;
+   //std::cout << ac2 ;
+
+   std::cout << "Before transfer: ac1=" << ac1.balance() << " - ac2=" << ac2.balance() << std::endl;
+   ac1.transfer(ac2, 20);
+   std::cout << "After transfer: ac1=" << ac1.balance() << " - ac2=" << ac2.balance() << std::endl;
+
 
    bank::Account ac3(c1, "FR76XX", date::Date(11,8));
-   std::cout << ac3 ;
+   //std::cout << ac3 ;
 
 
    std::cout << "Bye." << std::endl;

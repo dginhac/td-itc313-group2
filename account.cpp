@@ -33,6 +33,30 @@ namespace bank {
         return _max_debit;
     }
 
+    bool Account::debit(double amount) {
+        if ((amount <= 0) || (amount >= _balance) || (amount >= _max_debit)) {
+            return false;
+        }
+        _balance -= amount;
+        return true;
+    }
+
+    bool Account::credit(double amount) {
+        if (amount <= 0) {
+            return false;
+        }
+        _balance += amount;
+        return true;
+    }
+    bool Account::transfer(Account& dest, double amount) {
+        if (debit(amount)) {
+            dest.credit(amount);
+            std::cout << dest.balance() << std::endl;
+            return true;
+        }
+        return false;
+    }
+
     std::ostream& operator<<(std::ostream& os, const Account& account) {
         os << account.customer()<< std::endl;
         os << account.iban() << std::endl;

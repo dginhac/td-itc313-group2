@@ -24,6 +24,9 @@ namespace bank {
         date::Date creation() const;
         double balance() const;
         double max_debit() const;
+        bool debit(double amount);
+        bool credit(double amount);
+        bool transfer(Account& dest, double amount);
 
     private:
         people::Customer _customer;
