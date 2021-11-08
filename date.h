@@ -48,6 +48,8 @@ namespace date {
    Date operator -- (Date& date); // prefix decrement: --date
    Date operator ++ (Date& date, int); // use int paramater for postfix increment: date++
    Date operator -- (Date& date, int); // use int paramater for postfix decrement: date--
+   std::ostream& operator<<(std::ostream& os, const Date& date);
+
 } // date
 
 #endif // DATE_H

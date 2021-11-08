@@ -7,6 +7,7 @@
   */
 
 #include <string>
+#include <iostream>
 
 #ifndef ADDRESS_H
 #define ADDRESS_H

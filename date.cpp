@@ -219,4 +219,9 @@ namespace date {
         return (d1>d2);
     }
 
+    std::ostream& operator<<(std::ostream& os, const Date& date) {
+        os << std::to_string(date.day()) + "/" + std::to_string(date.month());
+        return os;
+    }
+
 } // date

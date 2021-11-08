@@ -1,7 +1,7 @@
 # Description des classes
 ## Classe Account
 
-Variables:
+Variables: ok
 * Client (customer) :  Objet de la classe Customer
 * Solde  (balance) :  double
 * IBAN (iban) : String ? ou Objet de la classe IBAN (voir page wikipedia IBAN)
@@ -9,14 +9,14 @@ Variables:
 * creation du compte (creation) : Objet de la classe Date
 
 Methodes ou Fonctions Helper
-* constructeur
-* Getters ? / Setters ?
-* surcharges d'opérateur ?
+* constructeur ok
+* Getters ok
+* surcharges d'opérateur << ok
 * ?
 
 ## Classe Customer
 
-Variables:
+Variables: ok
 * identifiant (id) : int
 * nom (lastname) : string
 * prenom (firstname) : string
@@ -27,9 +27,9 @@ Variables:
 * email (email) : string
 
 Methodes ou Fonctions Helper
-* constructeur
-* Getters ? / Setters ?
-* surcharges d'opérateur ?
+* constructeur ok
+* Getters OK 
+* surcharges d'opérateur << ok
 * ?
 
 ## Classe Address
