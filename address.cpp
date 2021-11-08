@@ -38,7 +38,7 @@ namespace people {
      * Helper functions
      */
 
-    std::string full_address(Address address) {
+    std::string full_address(const Address& address) {
         return std::to_string(address.number()) + ", " +
                address.street() + " - " +
                address.zipcode() + " " +
@@ -46,10 +46,10 @@ namespace people {
     }
 
     std::ostream& operator<<(std::ostream& os, const Address& address) {
-        std::string tmp = std::to_string(address.number()) + ", "  +
-                          address.street() + " - " +
-                          address.zipcode() +  " " + address.city() ;
-        os << tmp ;
+
+        os << std::to_string(address.number()) << ", "  <<
+              address.street() << " - " <<
+              address.zipcode() <<  " " << address.city()  ;
         return os;
     }
 }
