@@ -40,10 +40,19 @@ int main(int argc, char const *argv[]) {
    //std::cout << ac2 ;
 
    std::cout << "Before transfer: ac1=" << ac1.balance() << " - ac2=" << ac2.balance() << std::endl;
-   ac1.transfer(ac2, 20);
+   //ac1.transfer(ac2, 20);
+
+   transfer(ac1, ac2, 40);
    std::cout << "After transfer: ac1=" << ac1.balance() << " - ac2=" << ac2.balance() << std::endl;
 
+/*
+   credit(ac2, 1000);
+   std::cout << "ac2=" << ac2.balance() << std::endl;
 
+   ac2.setBalance(0.01);
+   std::cout << "ac2=" << ac2.balance() << std::endl;
+
+*/
    bank::Account ac3(c1, "FR76XX", date::Date(11,8));
    //std::cout << ac3 ;
 

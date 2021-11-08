@@ -12,7 +12,8 @@ Methodes ou Fonctions Helper
 * constructeur ok
 * Getters ok
 * surcharges d'opérateur << ok
-* ?
+* credit, debit, transfer 
+* Transfer (function helper) ok
 
 ## Classe Customer
 

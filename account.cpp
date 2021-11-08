@@ -48,14 +48,38 @@ namespace bank {
         _balance += amount;
         return true;
     }
+    /*
     bool Account::transfer(Account& dest, double amount) {
         if (debit(amount)) {
             dest.credit(amount);
-            std::cout << dest.balance() << std::endl;
             return true;
         }
         return false;
     }
+    */
+
+    bool transfer (Account& source, Account& dest, double amount) {
+        if (!source.debit(amount)) {
+            return false;
+        }
+        dest.credit(amount);
+        return true;
+    }
+/*
+    void Account::setBalance(double new_balance) {
+        if (new_balance >= 0) {
+            _balance = new_balance;
+        }
+    }
+
+    bool credit(Account& account, double amount) {
+        if (amount <= 0) {
+            return false;
+        }
+        account.setBalance(account.balance()+amount);
+        return true;
+    }
+*/
 
     std::ostream& operator<<(std::ostream& os, const Account& account) {
         os << account.customer()<< std::endl;

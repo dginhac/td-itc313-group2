@@ -26,7 +26,8 @@ namespace bank {
         double max_debit() const;
         bool debit(double amount);
         bool credit(double amount);
-        bool transfer(Account& dest, double amount);
+        //void setBalance(double new_balance);
+        //bool transfer(Account& dest, double amount);
 
     private:
         people::Customer _customer;
@@ -36,6 +37,8 @@ namespace bank {
         double _max_debit;
     };
 
+    bool transfer (Account& source, Account& dest, double amount);
+    bool credit(Account& accout, double amount);
     std::ostream& operator<<(std::ostream& os, const Account& account);
 } // bank
 
