@@ -40,7 +40,19 @@ namespace bank {
     bool transfer (Account& source, Account& dest, double amount);
     bool credit(Account& accout, double amount);
     std::ostream& operator<<(std::ostream& os, const Account& account);
+
+    class Saving : public Account {
+    public:
+        Saving(people::Customer customer, std::string iban,
+                date::Date creation, double rate=2.0,
+                double balance=0, double max_debit=0);
+        bool credit(double amount);
+    private:
+        double _rate;
+    };
 } // bank
+
+
 
 #endif // ACCOUNT_H
 

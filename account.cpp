@@ -89,4 +89,17 @@ namespace bank {
         os << account.max_debit() << std::endl;
         return os;
     }
+
+
+    Saving::Saving(people::Customer customer, std::string iban,
+                date::Date creation, double rate,
+                double balance, double max_debit) :
+                Account(customer, iban, creation, balance, max_debit),
+                _rate(rate) {}
+
+    bool Saving::credit(double amount) {
+        return Account::credit(amount*(1+_rate/100.00));
+    }
+
+
 }

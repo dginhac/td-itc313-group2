@@ -57,6 +57,17 @@ int main(int argc, char const *argv[]) {
    //std::cout << ac3 ;
 
 
+   std::cout << "Compte epargne" << std::endl;
+
+   bank::Saving epargne(c1, "FR76XX", date::Date(11,8), 5, 1000);
+
+   std::cout << epargne.balance() << std::endl;
+   epargne.credit(100);
+   std::cout << epargne.balance() << std::endl;
+   epargne.debit(30);
+   std::cout << epargne.balance() << std::endl;
+
+
    std::cout << "Bye." << std::endl;
 
 
